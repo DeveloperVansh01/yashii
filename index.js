@@ -33,7 +33,6 @@ const log = ()=> {
       console.error('Failed to copy: ', err);
     }
   }
-}
     const btn3 = document.createElement('button')
     btn3.classList.add('btn2')
     btn3.addEventListener('click',copyContent)
