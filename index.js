@@ -24,15 +24,19 @@ const log = ()=> {
         btn2.innerText = 'Clear Meow'
         btnA.appendChild(btn2)
 
-        const copy2 = () => {
-    let txt2 = 'hi'
-txt2.select
-    document.execCommand('copy')
-
+ let text = 'Hello World 69';
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
 }
     const btn3 = document.createElement('button')
     btn3.classList.add('btn2')
-    btn3.addEventListener('click',copy2)
+    btn3.addEventListener('click',copyContent)
     btn3.innerText = 'Copy Meoww'
     btnA.appendChild(btn3)
 
