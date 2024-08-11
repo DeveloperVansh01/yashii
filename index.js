@@ -21,7 +21,7 @@ const log = () => {
       input.value = ''
     }
     
-    const myHtml = `<button class="btn1">Clear Meow</button> <button class="btn2">Copy Meoww</button>`
+    const myHtml = `<button class="btn1">Clear Meow</button> <button class="btn2" onclick="myFunction()">Copy Meoww</button>`
     btnA.innerHTML = myHtml
     
     let btn1 = document.querySelector('.btn1').addEventListener('click',clear)
@@ -33,11 +33,6 @@ const log = () => {
     let newtxt = txt.toString()
     console.log(newtxt);
     
-      // function myFunction() {
-      //   var x = document.getElementById("snackbar");
-      //   x.className = "show";
-      //   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-      // }
       const copyContent = async () => {
         try {
           await navigator.clipboard.writeText(newtxt);
@@ -47,7 +42,7 @@ const log = () => {
         }
       }
 
-    let btn2 = document.querySelector('.btn2').addEventListener('click',copyContent,myFunction)
+    let btn2 = document.querySelector('.btn2').addEventListener('click',copyContent)
 
   
     for (let i = 0; i < newI; i++) {
@@ -70,4 +65,9 @@ const log = () => {
     }
 
 }
+      function myFunction() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      }
 const btn = document.querySelector('#btn').addEventListener('click', log)
