@@ -1,61 +1,66 @@
 
-
-
 const h1 = document.querySelector('h1')
 const btnA = document.querySelector('.btn-area')
 const container = document.querySelector(".container")
 const img = document.querySelector("img")
 let input = document.getElementById('input1');
 let audio = document.querySelector('#audio1')
-const log = ()=> {
-    let newI = input.value;
-
-    console.log(newI);
-    
+const log = () => {
+  let newI = input.value;
+  
+  if (newI == ''|| newI == null) {
     //clear btn
-        const clear = () => {
-            container.innerHTML = ""
-            btnA.innerHTML = ''
-            input.value = ''
-        }
-        const btn2 = document.createElement('button')
-        btn2.classList.add('btn1')
-        btn2.addEventListener('click',clear)
-        btn2.innerText = 'Clear Meow'
-        btnA.appendChild(btn2)
-
- let text = 'Hello World 69';
-  const copyContent = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      console.log('Content copied to clipboard');
-    } catch (err) {
-      console.error('Failed to copy: ', err);
+    console.log('error');
+    input.classList.add('placeholder')
+    
+  } else {
+    input.classList.remove('placeholder')
+    const clear = () => {
+      container.innerHTML = ""
+      btnA.innerHTML = ''
+      input.value = ''
     }
-  }
-    const btn3 = document.createElement('button')
-    btn3.classList.add('btn2')
-    btn3.addEventListener('click',copyContent)
-    btn3.innerText = 'Copy Meoww'
-    btnA.appendChild(btn3)
+    
+    const myHtml = `<button class="btn1">Clear Meow</button> <button class="btn2" onclick="copy();">Copy Meoww</button>`
+    btnA.innerHTML = myHtml
+    
+    let btn1 = document.querySelector('.btn1').addEventListener('click',clear)
+    let txt = ['Meoww😺',]
+    for (let i = 0; i < newI; i++) {
+      txt.splice(0,0, 'Meoww😺')
+    }
+    let newtxt = txt.toString()
+    console.log(newtxt);
+    
 
+    const copyContent = async () => {
+      try {
+        await navigator.clipboard.writeText(newtext);
+        console.log('Content copied to clipboard');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      }
+    }
+    let btn2 = document.querySelector('.btn2').addEventListener('click',copyContent)
+  
+    for (let i = 0; i < newI; i++) {
+        // creating Container
+        const newD = document.createElement('div')
+        newD.classList.add('image-con')
+        container.appendChild(newD)
+        // const newConatiner = document.querySelector('.image-con')
+        // Creating image and p tag
+        const imgC = document.createElement('img')
+        imgC.src = `https://i.pinimg.com/564x/a0/cb/5b/a0cb5b8674b3f322199670d5da39c8c9.jpg`
+        // p
+        const pokeNo = document.createElement('p')
+        pokeNo.innerText = 'Meoww'
+        newD.appendChild(imgC)
+        newD.appendChild(pokeNo)
+    }
+    audio.play();
+      
+    }
 
-
- for (let i = 0; i < newI; i++) {
-    // creating Container
-    const newD = document.createElement('div')
-    newD.classList.add('image-con')
-    container.appendChild(newD)
-    // const newConatiner = document.querySelector('.image-con')
-    // Creating image and p tag
-    const imgC = document.createElement('img')
-    imgC.src = `https://i.pinimg.com/564x/a0/cb/5b/a0cb5b8674b3f322199670d5da39c8c9.jpg`
-    // p
-    const pokeNo = document.createElement('p')
-    pokeNo.innerText =  'Meoww'
-    newD.appendChild(imgC)
-    newD.appendChild(pokeNo)
 }
-audio.play();
-}
-const btn = document.querySelector('#btn').addEventListener('click',log)
+const btn = document.querySelector('#btn').addEventListener('click', log)
