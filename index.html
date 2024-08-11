@@ -7,9 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
     />
+
     <style>
       * {
         font-family: "Poppins", sans-serif;
@@ -111,8 +112,10 @@
         align-items: center;
         justify-content: center;
         margin-top: 7px;
-        gap: 10px;
-      }
+        gap: 10px;      }
+        .placeholder::placeholder {
+          color: rgb(255, 37, 37);
+        }
     </style>
   </head>
   <body style="font-family: cursive">
@@ -121,12 +124,10 @@
       <form onsubmit="return false;">
       <input
         id="input1"
-        class="input"
+        class="input "
         type="number"
         placeholder="Enter number of meowws u want"
-        required
-        oninvalid="this.setCustomValidity('Cutiee Pls Enter Number Of Meowws😘😘')"
-      />
+        required/>
       <button id="btn" class="input" type="submit">
         <span>Click Me</span>
       </button>
@@ -138,6 +139,6 @@
     </audio>
     <div class="btn-area"></div>
     <div class="container"></div>
-    <script src="index.js"></script>
+    <script src="index.js" ></script>
   </body>
 </html>
