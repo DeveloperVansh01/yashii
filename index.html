@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yashi😺</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="style.css" />
     <style>
       * {
         font-family: "Poppins", sans-serif;
@@ -112,26 +116,108 @@
         align-items: center;
         justify-content: center;
         margin-top: 7px;
-        gap: 10px;      }
-        .placeholder::placeholder {
-          color: rgb(255, 37, 37);
+        gap: 10px;
+      }
+      .placeholder::placeholder {
+        color: rgb(255, 37, 37);
+      }
+      .material-symbols-outlined {
+        color: #eb2b2b;
+        justify-content: center;
+      }
+      #snackbar {
+        visibility: hidden;
+        min-width: 100px;
+        margin-left: -70px;
+        background-color: #fff;
+        color: #333;
+        text-align: center;
+        border-radius: 2px;
+        padding: 10px;
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        top: 30px;
+        font-size: 11px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.02),
+          0px 0px 5.3px rgba(0, 0, 0, 0.028), 0px 0px 10px rgba(0, 0, 0, 0.035),
+          0px 0px 17.9px rgba(0, 0, 0, 0.042),
+          0px 0px 33.4px rgba(0, 0, 0, 0.05), 0px 0px 80px rgba(0, 0, 0, 0.07);
+      }
+
+      #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      }
+
+      @-webkit-keyframes fadein {
+        from {
+          top: 0;
+          opacity: 0;
         }
+        to {
+          top: 30px;
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadein {
+        from {
+          top: 0;
+          opacity: 0;
+        }
+        to {
+          top: 30px;
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fadeout {
+        from {
+          top: 30px;
+          opacity: 1;
+        }
+        to {
+          top: 0;
+          opacity: 0;
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          top: 30px;
+          opacity: 1;
+        }
+        to {
+          top: 0;
+          opacity: 0;
+        }
+      }
+      .hover1:hover {
+        color: #000000;
+      }
+
     </style>
   </head>
   <body style="font-family: cursive">
+    <div class="toast"></div>
     <h1>Special Meow For Yashi Ji😺</h1>
     <div class="con">
       <form onsubmit="return false;">
-      <input
-        id="input1"
-        class="input "
-        type="number"
-        placeholder="Enter number of meowws u want"
-        required/>
-      <button id="btn" class="input" type="submit">
-        <span>Click Me</span>
-      </button>
-    </form>
+        <input
+          id="input1"
+          class="input"
+          type="number"
+          placeholder="Enter number of meowws u want"
+          required
+        />
+        <button id="btn" class="input" type="submit">
+          <span>Click Me</span>
+        </button>
+      </form>
     </div>
     <audio id="audio1">
       <source src="mixkit-sweet-kitty-meow-93.wav" type="audio/ogg" />
@@ -139,6 +225,9 @@
     </audio>
     <div class="btn-area"></div>
     <div class="container"></div>
-    <script src="index.js" ></script>
+    <div id="snackbar">✅ Meoww😺 Copied
+      Cutiee
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
