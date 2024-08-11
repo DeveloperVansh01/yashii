@@ -35,7 +35,7 @@ const log = () => {
 
     const copyContent = async () => {
       try {
-        await navigator.clipboard.writeText(newtext);
+        await navigator.clipboard.writeText(newtxt);
         console.log('Content copied to clipboard');
       } catch (err) {
         console.error('Failed to copy: ', err);
