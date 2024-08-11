@@ -33,12 +33,12 @@ const log = () => {
     let newtxt = txt.toString()
     console.log(newtxt);
     
-      function myFunction() {
-        var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-      }
-      const copContent = async () => {
+      // function myFunction() {
+      //   var x = document.getElementById("snackbar");
+      //   x.className = "show";
+      //   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      // }
+      const copyContent = async () => {
         try {
           await navigator.clipboard.writeText(newtxt);
           console.log('Content copied to clipboard');
@@ -47,7 +47,7 @@ const log = () => {
         }
       }
 
-    let btn2 = document.querySelector('.btn2').addEventListener('click',copContent,myFunction)
+    let btn2 = document.querySelector('.btn2').addEventListener('click',copyContent,myFunction)
 
   
     for (let i = 0; i < newI; i++) {
