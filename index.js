@@ -25,6 +25,7 @@ const log = () => {
     btnA.innerHTML = myHtml
     
     let btn1 = document.querySelector('.btn1').addEventListener('click',clear)
+
     let txt = ['Meoww😺',]
     for (let i = 0; i < newI; i++) {
       txt.splice(0,0, 'Meoww😺')
@@ -32,16 +33,25 @@ const log = () => {
     let newtxt = txt.toString()
     console.log(newtxt);
     
-
-    const copyContent = async () => {
-      try {
-        await navigator.clipboard.writeText(newtxt);
-        console.log('Content copied to clipboard');
-      } catch (err) {
-        console.error('Failed to copy: ', err);
+    const bothF = () => {
+      function myFunction() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
       }
+      const copContent = async () => {
+        try {
+          await navigator.clipboard.writeText(newtext);
+          console.log('Content copied to clipboard');
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      }
+
     }
-    let btn2 = document.querySelector('.btn2').addEventListener('click',copyContent)
+
+    let btn2 = document.querySelector('.btn2').addEventListener('click',bothF)
+
   
     for (let i = 0; i < newI; i++) {
         // creating Container
