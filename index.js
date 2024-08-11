@@ -47,7 +47,7 @@ const log = () => {
         }
       }
 
-    let btn2 = document.querySelector('.btn2').addEventListener('click',myFunction,copContent)
+    let btn2 = document.querySelector('.btn2').addEventListener('click',copContent,myFunction)
 
   
     for (let i = 0; i < newI; i++) {
