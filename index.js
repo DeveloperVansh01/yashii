@@ -21,7 +21,7 @@ const log = () => {
       input.value = ''
     }
     
-    const myHtml = `<button class="btn1">Clear Meow</button> <button class="btn2" onclick="copy();">Copy Meoww</button>`
+    const myHtml = `<button class="btn1">Clear Meow</button> <button class="btn2">Copy Meoww</button>`
     btnA.innerHTML = myHtml
     
     let btn1 = document.querySelector('.btn1').addEventListener('click',clear)
@@ -33,7 +33,6 @@ const log = () => {
     let newtxt = txt.toString()
     console.log(newtxt);
     
-    const bothF = () => {
       function myFunction() {
         var x = document.getElementById("snackbar");
         x.className = "show";
@@ -48,9 +47,7 @@ const log = () => {
         }
       }
 
-    }
-
-    let btn2 = document.querySelector('.btn2').addEventListener('click',bothF)
+    let btn2 = document.querySelector('.btn2').addEventListener('click',myFunction,copContent)
 
   
     for (let i = 0; i < newI; i++) {
