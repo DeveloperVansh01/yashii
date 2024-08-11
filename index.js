@@ -26,7 +26,7 @@ const log = () => {
     
     let btn1 = document.querySelector('.btn1').addEventListener('click',clear)
 
-    let txt = ['Meoww😺',]
+    let txt = ['Meoww😺']
     for (let i = 0; i < newI; i++) {
       txt.splice(0,0, 'Meoww😺')
     }
